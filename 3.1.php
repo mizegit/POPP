@@ -13,6 +13,7 @@ class ShopProduct {
 
 $product1 = new ShopProduct();
 //print $product1->title;
+var_dump($product1);
 
 $product1->title = "My Antonia";
 $product1->productFirstname = "willa";
