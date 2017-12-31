@@ -1,4 +1,5 @@
 <?php
+class templateClass {}
 class ShopProduct {
     public $title;
     public $firstname;
@@ -6,6 +7,8 @@ class ShopProduct {
     public $price;
 
     private $id = 0;
+    
+    public $template;
     
     public function setId( $id ) {
         $this -> id = $id;
@@ -60,6 +63,7 @@ class BookProduct extends ShopProduct {
         $this->mainname = $mainname;
         $this->price = $price;
         $this->numpages = $numpages;
+        $this->template = new templateClass();
     }
     public $numpages;
 }

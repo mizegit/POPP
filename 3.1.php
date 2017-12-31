@@ -12,8 +12,10 @@ class ShopProduct {
 }
 
 $product1 = new ShopProduct();
+$product2 = new ReflectionClass('ShopProduct');
 //print $product1->title;
 var_dump($product1);
+Reflection::export($product2);
 
 $product1->title = "My Antonia";
 $product1->productFirstname = "willa";
