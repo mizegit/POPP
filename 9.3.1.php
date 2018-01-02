@@ -9,7 +9,7 @@ class BloggerApptEncoder extends ApptEncoder {
     }
 }
 
-class MegaAppEncoder extends ApptEncoder {
+class MegaApptEncoder extends ApptEncoder {
     function encode() {
         return "Appointment data encoded in MegaCal format\n";
     }
@@ -27,7 +27,7 @@ class CommsManager {
     function getApptEncoder() {
         switch ( $this->mode ) {
             case ( self::MEGA ):
-                return new MegaAppEncoder();
+                return new MegaApptEncoder();
             default:
                 return new BloggerApptEncoder();
         }
@@ -36,4 +36,4 @@ class CommsManager {
 
 $comms = new CommsManager( CommsManager::MEGA );
 $apptEncoder = $comms->getApptEncoder();
-print $apptEncoder->encode();
+print $apptEncoder->encode(); 
